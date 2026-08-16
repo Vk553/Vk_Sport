@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="بث مباشر للمباراة - شاهد البث المباشر عالي الجودة">
+  <title>بث مباشر - VK SPORT</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./image/logo.ico">
+  <link rel="shortcut icon" href="./image/logo.ico">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts - Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+          },
+          colors: {
+            midnight: '#0f172a',
+            glass: '#1e293b',
+            crimson: '#dc2626',
+            live: '#ef4444',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #0f172a;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #1e293b;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #475569;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+
+    /* Glassmorphism effect */
+    .glass-card {
+      background: rgba(30, 41, 59, 0.5);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Video container aspect ratio */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-container iframe,
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Header / Footer hero image */
+    .header-hero {
+      height: 48px;
+      width: auto;
+      max-width: 220px;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Social icons */
+    .social-icon {
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: translateY(-2px);
+    }
+
+    .social-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-midnight text-white">
+
+  <!-- Header -->
+  <header class="glass-card border-b border-slate-700/50 sticky top-0 z-50">
+
+    <div class="container mx-auto px-4 py-4">
+
+      <div class="flex items-center justify-between">
+
+        <!-- Back Button + Hero Image -->
+        <div class="flex items-center gap-4">
+
+          <!-- Back Button -->
+          <a
+            href="index.html"
+            class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+
+            <span class="hidden sm:inline">
+              العودة
+            </span>
+          </a>
+
+
+          <!-- Hero Image -->
+          <div class="flex items-center">
+
+            <img
+              src="./image/hero.webp"
+              alt="VK SPORT"
+              class="header-hero"
+            >
+
+          </div>
+
+        </div>
+
+
+        <!-- Join Us -->
+        <div class="flex flex-col items-center">
+
+          <span class="text-sm font-bold text-white mb-2">
+            أنضم إلينا
+          </span>
+
+
+          <div class="flex items-center gap-2">
+
+            <!-- YouTube -->
+            <a
+              href="#"
+              id="youtube-link-header"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon bg-red-600/10 text-red-500 hover:bg-red-600 hover:text-white"
+              aria-label="YouTube"
+              title="YouTube"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.8V8.2l6.5 3.8-6.5 3.8Z"/>
+              </svg>
+
+            </a>
+
+
+            <!-- Telegram -->
+            <a
+              href="#"
+              id="telegram-link-header"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon bg-sky-500/10 text-sky-400 hover:bg-sky-500 hover:text-white"
+              aria-label="Telegram"
+              title="Telegram"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M21.9 3.2 2.8 10.6c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.9c.2.6.1.9.7.9.5 0 .7-.2 1-.4.4l2.4-2.3 5 3.7c.9.5 1.6.3 1.8-.8l3.2-15.1c.3-1.4-.5-2-1.2-1.7ZM8.3 13.3l10.8-6.8c.5-.3.9-.1.5.2l-8.8 7.9-.3 3.2-2.2-4.5Z"/>
+              </svg>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- Top Banner Ad Slot -->
+  <div id="ad-top-banner" class="container mx-auto px-4 py-4">
+
+    <!-- Banner 728x90 ad will be injected here -->
+
+    <div class="bg-slate-800/30 rounded-lg p-4 text-center text-slate-500 text-sm border border-slate-700/30">
+      مساحة إعلانية (728x90)
+    </div>
+
+  </div>
+
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-8">
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+
+      <!-- Video Player Section -->
+      <div class="lg:col-span-2">
+
+        <!-- Match Info -->
+        <div
+          id="match-info"
+          class="glass-card rounded-xl p-6 mb-6 border border-slate-700/50"
+        >
+
+          <!-- Match info will be dynamically inserted here -->
+
+          <div class="text-center py-4">
+
+            <div class="inline-block animate-spin rounded-full h-6 w-6 border-b-2 border-red-500"></div>
+
+            <p class="text-slate-400 mt-2 text-sm">
+              جاري تحميل معلومات المباراة...
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Video Player -->
+        <div class="glass-card rounded-xl overflow-hidden border border-slate-700/50 mb-6">
+
+          <div
+            class="video-container bg-black"
+            id="video-wrapper"
+          >
+
+            <!-- Video Container -->
+
+            <div
+              id="video-container"
+              class="w-full h-full"
+            >
+
+              <!-- iframe or error message will be dynamically inserted here -->
+
+              <div class="absolute inset-0 flex items-center justify-center bg-slate-900">
+
+                <div class="text-center">
+
+                  <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-red-500 mb-4"></div>
+
+                  <p class="text-slate-400">
+                    جاري تحميل البث...
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Server Selection -->
+        <div class="glass-card rounded-xl p-6 border border-slate-700/50">
+
+          <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+
+            <svg
+              class="w-5 h-5 text-red-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
+              ></path>
+            </svg>
+
+            اختيار السيرفر
+
+          </h3>
+
+
+          <div
+            id="server-buttons"
+            class="grid grid-cols-1 sm:grid-cols-2 gap-3"
+          >
+
+            <!-- Server buttons will be dynamically inserted here -->
+
+            <div class="col-span-full text-center py-4 text-slate-400 text-sm">
+              جاري تحميل السيرفرات...
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-1">
+
+
+        <!-- Native Banner Ad Slot -->
+        <div
+          id="ad-native-banner"
+          class="glass-card rounded-xl p-4 border border-slate-700/50 mb-6"
+        >
+
+          <!-- Native banner ad will be injected here -->
+
+          <div class="bg-slate-800/30 rounded-lg p-4 text-center text-slate-500 text-sm border border-slate-700/30">
+            مساحة إعلانية أصلية
+          </div>
+
+        </div>
+
+
+        <!-- Sidebar Ad Slot -->
+        <div
+          id="ad-sidebar"
+          class="glass-card rounded-xl p-4 border border-slate-700/50 mb-6"
+        >
+
+          <!-- Sidebar ad will be injected here -->
+
+          <div class="bg-slate-800/30 rounded-lg p-4 text-center text-slate-500 text-sm border border-slate-700/30">
+            مساحة إعلانية جانبية
+          </div>
+
+        </div>
+
+
+        <!-- Quick Links -->
+        <div class="glass-card rounded-xl p-6 border border-slate-700/50">
+
+          <h3 class="text-lg font-bold mb-4">
+            روابط سريعة
+          </h3>
+
+
+          <div class="space-y-3">
+
+
+            <!-- Home -->
+            <a
+              href="index.html"
+              class="flex items-center gap-3 text-slate-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-slate-700/30"
+            >
+
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                ></path>
+              </svg>
+
+              <span>
+                الرئيسية
+              </span>
+
+            </a>
+
+
+            <!-- Matches -->
+            <a
+              href="#"
+              class="flex items-center gap-3 text-slate-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-slate-700/30"
+            >
+
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                ></path>
+              </svg>
+
+              <span>
+                جدول المباريات
+              </span>
+
+            </a>
+
+
+            <!-- Channels -->
+            <a
+              href="#"
+              class="flex items-center gap-3 text-slate-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-slate-700/30"
+            >
+
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                ></path>
+              </svg>
+
+              <span>
+                القنوات المتاحة
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- Social Bar Ad Slot -->
+  <div
+    id="ad-social-bar"
+    class="fixed bottom-0 left-0 right-0 z-40"
+  >
+
+    <!-- Social bar script will be injected here -->
+
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="glass-card border-t border-slate-700/50 mt-12">
+
+    <div class="container mx-auto px-4 py-8">
+
+      <div class="text-center">
+
+
+        <!-- Footer Hero Image -->
+        <div class="flex justify-center mb-5">
+
+          <img
+            src="./image/hero.webp"
+            alt="VK SPORT"
+            class="header-hero"
+          >
+
+        </div>
+
+
+        <!-- Copyright -->
+        <p class="text-slate-400 text-sm mb-5">
+          جميع الحقوق محفوظة © 2026 - VK SPORT
+        </p>
+
+
+        <!-- Join Us -->
+        <div class="flex flex-col items-center">
+
+          <span class="text-sm font-bold text-white mb-3">
+            أنضم إلينا
+          </span>
+
+
+          <div class="flex items-center justify-center gap-3 mb-5">
+
+
+            <!-- YouTube -->
+            <a
+              href="#"
+              id="youtube-link-footer"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon bg-red-600/10 text-red-500 hover:bg-red-600 hover:text-white"
+              aria-label="YouTube"
+              title="YouTube"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.8V8.2l6.5 3.8-6.5 3.8Z"/>
+              </svg>
+
+            </a>
+
+
+            <!-- Telegram -->
+            <a
+              href="#"
+              id="telegram-link-footer"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon bg-sky-500/10 text-sky-400 hover:bg-sky-500 hover:text-white"
+              aria-label="Telegram"
+              title="Telegram"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M21.9 3.2 2.8 10.6c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.9c.2.6.1.9.7.9.5 0 .7-.2 1-.4.4l2.4-2.3 5 3.7c.9.5 1.6.3 1.8-.8l3.2-15.1c.3-1.4-.5-2-1.2-1.7ZM8.3 13.3l10.8-6.8c.5-.3.9-.1.5.2l-8.8 7.9-.3 3.2-2.2-4.5Z"/>
+              </svg>
+
+            </a>
+
+
+          </div>
+
+
+          <!-- Footer Contact -->
+          <div class="flex items-center justify-center gap-4 text-slate-500 text-sm">
+
+            <a
+              href="#"
+              class="hover:text-red-500 transition-colors"
+            >
+              اتصل بنا
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Social Links Configuration -->
+  <script>
+
+    /*
+      ============================================
+      ضع روابط قنواتك هنا لاحقاً
+      ============================================
+    */
+
+    const YOUTUBE_URL = "https://www.youtube.com/@Vk_Sport408";
+    const TELEGRAM_URL = "https://t.me/Vk_Sport";
+
+
+    /*
+      YouTube
+      يطبق الرابط على أيقونة الهيدر والفوتر
+    */
+    document.querySelectorAll(
+      '#youtube-link-header, #youtube-link-footer'
+    ).forEach(link => {
+
+      link.href = YOUTUBE_URL;
+
+    });
+
+
+    /*
+      Telegram
+      يطبق الرابط على أيقونة الهيدر والفوتر
+    */
+    document.querySelectorAll(
+      '#telegram-link-header, #telegram-link-footer'
+    ).forEach(link => {
+
+      link.href = TELEGRAM_URL;
+
+    });
+
+  </script>
+
+
+  <!-- Scripts -->
+  <script src="./js/ads-config.js"></script>
+  <script src="./js/player.js"></script>
+
+</body>
+</html>
