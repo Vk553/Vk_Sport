@@ -86,59 +86,7 @@ CHANNEL_MAPPINGS = {
 }
 
 
-# Commentator mappings
-COMMENTATOR_MAPPINGS = {
-    # England
-    "Premier League": "رؤوف خليف",
-    "FA Cup": "رؤوف خليف",
-    "EFL Cup": "رؤوف خليف",
-    "Community Shield": "رؤوف خليف",
 
-    # Spain
-    "La Liga": "عصام الشوالي",
-    "Copa del Rey": "عصام الشوالي",
-    "Supercopa de España": "عصام الشوالي",
-
-    # Italy
-    "Serie A": "حفيظ دراجي",
-    "Coppa Italia": "حفيظ دراجي",
-    "Supercoppa Italiana": "حفيظ دراجي",
-
-    # Germany
-    "Bundesliga": "جمال الغيطاني",
-    "DFB Pokal": "جمال الغيطاني",
-    "DFL Supercup": "جمال الغيطاني",
-
-    # France
-    "Ligue 1": "محمود سعيد",
-    "Coupe de France": "محمود سعيد",
-    "Trophée des Champions": "محمود سعيد",
-
-    # European / International club competitions
-    "UEFA Champions League": "عصام الشوالي",
-    "UEFA Europa League": "رؤوف خليف",
-    "UEFA Europa Conference League": "رؤوف خليف",
-    "UEFA Super Cup": "عصام الشوالي",
-
-    # Saudi Arabia
-    "Saudi Professional League": "عصام الشوالي",
-    "Saudi Pro League": "عصام الشوالي",
-    "King's Cup": "رؤوف خليف",
-    "King Cup": "رؤوف خليف",
-    "Saudi Super Cup": "رؤوف خليف",
-
-    # Continental Asian competitions
-    "AFC Champions League": "عصام الشوالي",
-    "AFC Champions League Two": "عصام الشوالي",
-    "AFC Champions League Elite": "عصام الشوالي",
-
-    # Friendlies / pre-season / exhibitions
-    "Friendlies": "محمود سعيد",
-    "Friendlies Clubs": "محمود سعيد",
-    "Club Friendlies": "محمود سعيد",
-
-    "default": "معلق المباراة"
-}
 
 
 # Allowed teams for match filtering
@@ -471,114 +419,15 @@ class MatchDataPipeline:
         self,
         league_name: str
     ) -> str:
-        """Get appropriate commentator for a league.
-
-        Mirrors _get_channel_for_league's matching strategy:
-        1) exact match against COMMENTATOR_MAPPINGS
-        2) case-insensitive substring match against known
-           competition-family keywords, ordered from most
-           specific to most general so e.g. "AFC Champions
-           League Two" doesn't get swallowed by a looser rule
-           before a more specific one gets a chance.
-        3) generic default, only as a last resort.
+        """
+        Commentator name is not provided by any football data API —
+        it can only be known from the broadcasting channel's own
+        announcements shortly before a match, which isn't a
+        reliable automatable source. Rather than guess incorrectly
+        per league, always return a neutral placeholder.
         """
 
-        if league_name in COMMENTATOR_MAPPINGS:
-            return COMMENTATOR_MAPPINGS[league_name]
-
-        league_lower = league_name.lower()
-
-        # Saudi Arabia (local competitions)
-        if any(
-            keyword in league_lower
-            for keyword in [
-                "saudi pro",
-                "saudi professional",
-                "king's cup",
-                "king cup",
-                "saudi super cup"
-            ]
-        ):
-            return "رؤوف خليف"
-
-        # Asian continental club competitions
-        if "afc champions league" in league_lower:
-            return "عصام الشوالي"
-
-        # England
-        if any(
-            keyword in league_lower
-            for keyword in [
-                "premier league",
-                "fa cup",
-                "efl cup",
-                "community shield"
-            ]
-        ):
-            return "رؤوف خليف"
-
-        # Spain
-        if any(
-            keyword in league_lower
-            for keyword in [
-                "la liga",
-                "copa del rey",
-                "supercopa"
-            ]
-        ):
-            return "عصام الشوالي"
-
-        # Italy
-        if any(
-            keyword in league_lower
-            for keyword in [
-                "serie a",
-                "coppa italia",
-                "supercoppa"
-            ]
-        ):
-            return "حفيظ دراجي"
-
-        # Germany
-        if any(
-            keyword in league_lower
-            for keyword in [
-                "bundesliga",
-                "dfb pokal",
-                "dfl supercup"
-            ]
-        ):
-            return "جمال الغيطاني"
-
-        # France
-        if any(
-            keyword in league_lower
-            for keyword in [
-                "ligue 1",
-                "coupe de france",
-                "trophee des champions",
-                "trophée des champions"
-            ]
-        ):
-            return "محمود سعيد"
-
-        # European continental competitions
-        if any(
-            keyword in league_lower
-            for keyword in [
-                "champions league",
-                "europa league",
-                "conference league",
-                "uefa super cup"
-            ]
-        ):
-            return "عصام الشوالي"
-
-        # Friendlies / exhibitions / pre-season
-        if "friendl" in league_lower:
-            return "محمود سعيد"
-
-        return COMMENTATOR_MAPPINGS["default"]
+        return "غير محدد"
 
     def _is_allowed_team(
         self,
