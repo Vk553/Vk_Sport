@@ -1118,6 +1118,38 @@ class MatchDataPipeline:
                     ''
                 )
 
+                league_country = fixture.get(
+                    'league',
+                    {}
+                ).get(
+                    'country',
+                    'Unknown Country'
+                )
+
+                # --- DIAGNOSTIC LOGGING (temporary) ---
+                # Log the raw, unmodified strings the API actually
+                # sends for any team loosely resembling "Al-Hilal"
+                # or "Al-Ahli", whether or not our filter currently
+                # accepts it, so we see ground truth in the workflow
+                # logs instead of guessing at more name variants.
+                for raw_name in (home_team, away_team):
+
+                    raw_lower = raw_name.lower()
+
+                    if (
+                        "hilal" in raw_lower
+                        or "ahli" in raw_lower
+                    ):
+                        logger.info(
+                            "DIAGNOSTIC — candidate team seen: "
+                            f"raw_name='{raw_name}' | "
+                            f"league='{league_name}' | "
+                            f"country='{league_country}' | "
+                            "currently_matched="
+                            f"{self._is_allowed_team(raw_name)}"
+                        )
+                # --- END DIAGNOSTIC LOGGING ---
+
                 # Filter
                 if not (
                     self._is_allowed_team(
