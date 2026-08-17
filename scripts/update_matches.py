@@ -1038,6 +1038,37 @@ class MatchDataPipeline:
 
             data = response.json()
 
+            # --- DIAGNOSTIC LOGGING (temporary) ---
+            logger.info(
+                "DIAGNOSTIC — requested date param: "
+                f"'{today}'"
+            )
+            logger.info(
+                "DIAGNOSTIC — API 'results' field: "
+                f"{data.get('results', 'MISSING')}"
+            )
+            logger.info(
+                "DIAGNOSTIC — API 'errors' field: "
+                f"{data.get('errors', 'MISSING')}"
+            )
+            logger.info(
+                "DIAGNOSTIC — raw fixtures in 'response' array: "
+                f"{len(data.get('response', []))}"
+            )
+            # Show the first 5 fixtures raw, whatever they are,
+            # so we can see real team/league names regardless of
+            # whether they match our filter
+            for fixture in data.get('response', [])[:5]:
+                sample_home = fixture.get('teams', {}).get('home', {}).get('name')
+                sample_away = fixture.get('teams', {}).get('away', {}).get('name')
+                sample_league = fixture.get('league', {}).get('name')
+                logger.info(
+                    "DIAGNOSTIC — sample fixture: "
+                    f"{sample_home} vs {sample_away} "
+                    f"({sample_league})"
+                )
+            # --- END DIAGNOSTIC LOGGING ---
+
             return self._process_api_football_data(
                 data
             )
