@@ -133,12 +133,20 @@ ALLOWED_TEAMS = {
     # Saudi Arabia
     "Al-Hilal",
     "Al Hilal",
+    "Al Hilal Saudi FC",
+    "Al-Hilal Saudi FC",
+    "Al Hilal SFC",
+    "Al-Hilal SFC",
     "Al-Nassr",
     "Al Nassr",
     "Al-Ittihad",
     "Al Ittihad",
     "Al-Ahli",
     "Al Ahli",
+    "Al Ahli Saudi FC",
+    "Al-Ahli Saudi FC",
+    "Al Ahli SFC",
+    "Al-Ahli SFC",
     "Al-Shabab",
     "Al Shabab"
 }
@@ -177,7 +185,13 @@ TEAM_VARIATIONS = {
 
     "Al-Hilal": [
         "Al-Hilal",
-        "Al Hilal"
+        "Al Hilal",
+        "Al Hilal Saudi FC",
+        "Al-Hilal Saudi FC",
+        "Al Hilal SFC",
+        "Al-Hilal SFC",
+        "Al Hilal Saudi",
+        "Al-Hilal Saudi"
     ],
 
     "Al-Nassr": [
@@ -192,7 +206,13 @@ TEAM_VARIATIONS = {
 
     "Al-Ahli": [
         "Al-Ahli",
-        "Al Ahli"
+        "Al Ahli",
+        "Al Ahli Saudi FC",
+        "Al-Ahli Saudi FC",
+        "Al Ahli SFC",
+        "Al-Ahli SFC",
+        "Al Ahli Saudi",
+        "Al-Ahli Saudi"
     ],
 
     "Al-Shabab": [
