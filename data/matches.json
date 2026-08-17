@@ -6,5 +6,36 @@
     "banner_728x90_script": "",
     "native_banner_script": ""
   },
-  "matches": []
+  "matches": [
+    {
+      "id": "match-al-raed-al-hilal-saudi-fc-20260817",
+      "league": "King's Cup",
+      "status": "UPCOMING",
+      "time": "09:00 PM",
+      "homeTeam": {
+        "name": "Al-Raed",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.api-sports.io%2Ffootball%2Fteams%2F2935.png"
+      },
+      "awayTeam": {
+        "name": "Al-Hilal Saudi FC",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.api-sports.io%2Ffootball%2Fteams%2F2932.png"
+      },
+      "channel": "ثمانية / Thmanyah",
+      "commentator": "رؤوف خليف",
+      "servers": [
+        {
+          "id": "srv1",
+          "name": "سيرفر رئيسي (1080p)",
+          "quality": "1080p",
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+        },
+        {
+          "id": "srv2",
+          "name": "سيرفر احتياطي (720p)",
+          "quality": "720p HD",
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+        }
+      ]
+    }
+  ]
 }
