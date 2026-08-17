@@ -136,6 +136,7 @@ ALLOWED_TEAMS = {
 
     # France
     "Paris Saint-Germain",
+    "Paris Saint Germain",
     "PSG",
     "Marseille",
     "Lyon",
@@ -307,7 +308,8 @@ ALLOWED_SUFFIXES = [
     "AC",
     "SSC",
     "RCD",
-    "UD"
+    "UD",
+    "Saudi"
 ]
 
 
