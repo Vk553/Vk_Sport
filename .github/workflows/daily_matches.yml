@@ -42,6 +42,7 @@ jobs:
         run: |
           python scripts/update_matches.py
         env:
+          APISPORT_ONLINE_KEY: ${{ secrets.APISPORT_ONLINE_KEY }}
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
           FOOTBALL_DATA_ORG_KEY: ${{ secrets.FOOTBALL_DATA_ORG_KEY }}
       
