@@ -6,5 +6,36 @@
     "banner_728x90_script": "",
     "native_banner_script": ""
   },
-  "matches": []
+  "matches": [
+    {
+      "id": "match-atlético-madrid-málaga-20260819",
+      "league": "LaLiga",
+      "status": "UPCOMING",
+      "time": "10:00 PM",
+      "homeTeam": {
+        "name": "Atlético Madrid",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapi.apisport.online%2Fstatic%2Fimages%2Fteams%2F2836.png"
+      },
+      "awayTeam": {
+        "name": "Málaga",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapi.apisport.online%2Fstatic%2Fimages%2Fteams%2F2830.png"
+      },
+      "channel": "beIN SPORTS",
+      "commentator": "غير محدد",
+      "servers": [
+        {
+          "id": "srv1",
+          "name": "سيرفر رئيسي (1080p)",
+          "quality": "1080p",
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+        },
+        {
+          "id": "srv2",
+          "name": "سيرفر احتياطي (720p)",
+          "quality": "720p HD",
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+        }
+      ]
+    }
+  ]
 }
