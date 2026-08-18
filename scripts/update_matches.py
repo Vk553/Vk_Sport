@@ -9,6 +9,7 @@ import json
 import os
 import sys
 import requests
+import unicodedata
 from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional, Any
 from urllib.parse import quote
@@ -176,7 +177,9 @@ TEAM_VARIATIONS = {
     "Atletico Madrid": [
         "Atletico Madrid",
         "Atlético Madrid",
-        "Club Atlético de Madrid"
+        "Club Atlético de Madrid",
+        "Atl. Madrid",
+        "Atl Madrid"
     ],
 
     "Athletic Bilbao": [
@@ -449,6 +452,45 @@ class MatchDataPipeline:
 
         return "غير محدد"
 
+    def _normalize_for_matching(
+        self,
+        text: str
+    ) -> str:
+        """
+        Normalize text for robust team-name comparison.
+
+        Two issues this solves at once:
+        1) Unicode normalization form mismatches — the same
+           visible character (e.g. 'é') can be encoded either as
+           one precomposed codepoint or as a base letter plus a
+           separate combining accent mark. Two strings that look
+           identical can fail a strict equality check if one API
+           sends one form and our code has the other.
+        2) Accent-insensitive fallback — 'Atlético' vs 'Atletico'
+           will match even if a source drops diacritics entirely.
+
+        NFKD splits accented characters into base + combining
+        mark, then we drop every combining mark (Unicode category
+        'Mn'), leaving a plain-accent-free, normalization-form-
+        independent string for comparison.
+        """
+
+        if not text:
+            return ""
+
+        decomposed = unicodedata.normalize(
+            "NFKD",
+            text
+        )
+
+        without_accents = "".join(
+            ch
+            for ch in decomposed
+            if unicodedata.category(ch) != "Mn"
+        )
+
+        return without_accents.lower().strip()
+
     def _is_allowed_team(
         self,
         team_name: str
@@ -459,7 +501,9 @@ class MatchDataPipeline:
             return False
 
         team_name_normalized = (
-            team_name.lower().strip()
+            self._normalize_for_matching(
+                team_name
+            )
         )
 
         # Check disallowed suffixes first
@@ -482,7 +526,9 @@ class MatchDataPipeline:
             for variation in variations:
 
                 variation_normalized = (
-                    variation.lower().strip()
+                    self._normalize_for_matching(
+                        variation
+                    )
                 )
 
                 # Exact match
@@ -516,7 +562,9 @@ class MatchDataPipeline:
         for allowed_team in ALLOWED_TEAMS:
 
             allowed_normalized = (
-                allowed_team.lower().strip()
+                self._normalize_for_matching(
+                    allowed_team
+                )
             )
 
             if team_name_normalized == allowed_normalized:
