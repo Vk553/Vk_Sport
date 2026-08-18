@@ -1061,7 +1061,12 @@ class MatchDataPipeline:
 
         try:
 
-            now = datetime.now()
+            # Use Iraq/local time (UTC+3), not the server's UTC
+            # clock, so "today" matches what visitors actually
+            # expect near midnight local time.
+            now = datetime.now(
+                LOCAL_TIMEZONE
+            )
             today = now.strftime(
                 "%Y-%m-%d"
             )
@@ -1379,7 +1384,12 @@ class MatchDataPipeline:
 
         try:
 
-            now = datetime.now()
+            # Use Iraq/local time (UTC+3), not the server's UTC
+            # clock, so "today" matches what visitors actually
+            # expect near midnight local time.
+            now = datetime.now(
+                LOCAL_TIMEZONE
+            )
 
             today = now.strftime(
                 "%Y-%m-%d"
@@ -1621,7 +1631,12 @@ class MatchDataPipeline:
 
         try:
 
-            now = datetime.now()
+            # Use Iraq/local time (UTC+3), not the server's UTC
+            # clock, so "today" matches what visitors actually
+            # expect near midnight local time.
+            now = datetime.now(
+                LOCAL_TIMEZONE
+            )
             today = now.strftime(
                 "%Y-%m-%d"
             )
