@@ -1543,6 +1543,265 @@ class MatchDataPipeline:
 
         return matches
 
+    def fetch_matches_from_apisport_online(
+        self
+    ) -> Optional[List[Dict]]:
+        """
+        Fetch matches from apisport.online.
+
+        Returns None (not []) when the key is missing or the
+        request fails, so run() can tell a real failure apart
+        from a genuinely empty result — same pattern as the
+        other two sources.
+
+        Auth header confirmed via apisport.online's own curl
+        example: 'x-api-key: <key>'.
+        """
+
+        api_key = os.environ.get(
+            "APISPORT_ONLINE_KEY"
+        )
+
+        if not api_key:
+
+            logger.info(
+                "APISPORT_ONLINE_KEY not set, "
+                "skipping apisport.online"
+            )
+
+            return None
+
+        try:
+
+            now = datetime.now()
+            today = now.strftime(
+                "%Y-%m-%d"
+            )
+
+            url = (
+                "https://api.apisport.online/"
+                f"api/v1/fixtures/by-date?date={today}"
+            )
+
+            headers = {
+                "x-api-key": api_key,
+                "Content-Type": "application/json"
+            }
+
+            response = requests.get(
+                url,
+                headers=headers,
+                timeout=REQUEST_TIMEOUT
+            )
+
+            response.raise_for_status()
+
+            data = response.json()
+
+            if not data.get("success"):
+
+                logger.error(
+                    "apisport.online returned success=false: "
+                    f"{data}"
+                )
+
+                return None
+
+            return self._process_apisport_online_data(
+                data
+            )
+
+        except Exception as e:
+
+            logger.error(
+                f"Error fetching from apisport.online: {e}"
+            )
+
+            return None
+
+    def _process_apisport_online_data(
+        self,
+        data: Dict
+    ) -> List[Dict]:
+        """
+        Parse apisport.online's response structure, which groups
+        fixtures by league:
+
+        data["data"] = [
+            {
+                "name": "<league name>",
+                "country": {"name": "..."},
+                "fixtures": [
+                    {
+                        "homeTeam": {"name": "...", "logoUrl": "..."},
+                        "awayTeam": {"name": "...", "logoUrl": "..."},
+                        "startTime": "2026-08-18T15:00:00.000Z",
+                        "status": "NS" | "FT" | ...
+                    },
+                    ...
+                ]
+            },
+            ...
+        ]
+        """
+
+        matches = []
+
+        for league_group in data.get("data", []):
+
+            try:
+
+                league_name = league_group.get(
+                    "name",
+                    "Unknown League"
+                )
+
+                for fixture in league_group.get(
+                    "fixtures",
+                    []
+                ):
+
+                    home_team = fixture.get(
+                        "homeTeam",
+                        {}
+                    ).get(
+                        "name",
+                        ""
+                    )
+
+                    away_team = fixture.get(
+                        "awayTeam",
+                        {}
+                    ).get(
+                        "name",
+                        ""
+                    )
+
+                    if not home_team or not away_team:
+                        continue
+
+                    # Filter — same allow-list as other sources
+                    if not (
+                        self._is_allowed_team(
+                            home_team
+                        )
+                        or
+                        self._is_allowed_team(
+                            away_team
+                        )
+                    ):
+                        continue
+
+                    home_team_logo = fixture.get(
+                        "homeTeam",
+                        {}
+                    ).get(
+                        "logoUrl",
+                        ""
+                    )
+
+                    away_team_logo = fixture.get(
+                        "awayTeam",
+                        {}
+                    ).get(
+                        "logoUrl",
+                        ""
+                    )
+
+                    match_date = fixture.get(
+                        "startTime",
+                        ""
+                    )
+
+                    match_id = self._generate_match_id(
+                        home_team,
+                        away_team,
+                        match_date
+                    )
+
+                    existing_match = (
+                        self.existing_matches.get(
+                            match_id
+                        )
+                    )
+
+                    formatted_time = (
+                        self._format_time_from_datetime(
+                            match_date
+                        )
+                    )
+
+                    match_status = (
+                        self._determine_match_status(
+                            match_date,
+                            ""
+                        )
+                    )
+
+                    match_data = {
+                        "id": match_id,
+
+                        "league": (
+                            self._get_arabic_league_name(
+                                league_name
+                            )
+                        ),
+
+                        "status": match_status,
+
+                        "time": formatted_time,
+
+                        "homeTeam": {
+                            "name": home_team,
+                            "logo": self._get_team_logo(
+                                home_team,
+                                home_team_logo
+                            )
+                        },
+
+                        "awayTeam": {
+                            "name": away_team,
+                            "logo": self._get_team_logo(
+                                away_team,
+                                away_team_logo
+                            )
+                        },
+
+                        "channel": (
+                            self._get_channel_for_league(
+                                league_name
+                            )
+                        ),
+
+                        "commentator": (
+                            self._get_commentator_for_league(
+                                league_name
+                            )
+                        ),
+
+                        "servers": (
+                            self._create_server_config(
+                                match_id,
+                                existing_match
+                            )
+                        )
+                    }
+
+                    matches.append(
+                        match_data
+                    )
+
+            except Exception as e:
+
+                logger.warning(
+                    f"Error processing apisport.online league "
+                    f"group: {e}"
+                )
+
+                continue
+
+        return matches
+
     def run(self) -> bool:
         """Execute the match data pipeline."""
 
@@ -1552,22 +1811,46 @@ class MatchDataPipeline:
 
         try:
 
-            # API-Football first
-            api_football_result = (
-                self.fetch_matches_from_api_football()
+            # apisport.online first — broadest league coverage
+            apisport_result = (
+                self.fetch_matches_from_apisport_online()
             )
 
-            # football-data.org fallback — only meaningful if
-            # API-Football didn't even run (missing key / failed)
+            # API-Football — only tried if apisport.online
+            # didn't even run (missing key / failed)
+            api_football_result = None
+
+            if apisport_result is None:
+
+                api_football_result = (
+                    self.fetch_matches_from_api_football()
+                )
+
+            # football-data.org — last resort, only tried if
+            # both of the above didn't run
             football_data_org_result = None
 
-            if api_football_result is None:
+            if (
+                apisport_result is None
+                and
+                api_football_result is None
+            ):
 
                 football_data_org_result = (
                     self.fetch_matches_from_football_data_org()
                 )
 
-            if api_football_result is not None:
+            if apisport_result is not None:
+
+                matches = apisport_result
+
+                logger.info(
+                    f"Successfully fetched "
+                    f"{len(matches)} matches "
+                    f"from apisport.online for allowed teams"
+                )
+
+            elif api_football_result is not None:
 
                 matches = api_football_result
 
@@ -1589,17 +1872,19 @@ class MatchDataPipeline:
 
             else:
 
-                # BOTH sources failed or have no key configured.
-                # Do NOT overwrite matches.json with an empty list —
-                # that would wipe every manually-curated embed URL
-                # for today. Keep whatever is already in the file.
+                # ALL THREE sources failed or have no key
+                # configured. Do NOT overwrite matches.json with
+                # an empty list — that would wipe every
+                # manually-curated embed URL for today. Keep
+                # whatever is already in the file.
                 matches = list(
                     self.existing_matches.values()
                 )
 
                 logger.warning(
-                    "Both API-Football and football-data.org were "
-                    "unavailable (missing key or request failed). "
+                    "apisport.online, API-Football, and "
+                    "football-data.org were all unavailable "
+                    "(missing key or request failed). "
                     "Preserving existing matches.json UNCHANGED "
                     "instead of overwriting it with an empty list."
                 )
