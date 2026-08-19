@@ -1,9 +1,11 @@
 name: Daily Match Data Update
 
 on:
-  # Run every day at 5:00 AM UTC
+  # Runs at 21:10 UTC, which is 00:10 AM Iraq time (UTC+3) —
+  # just after midnight local time, so "today's matches" are
+  # ready as early as possible for visitors.
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '10 21 * * *'
   
   # Allow manual trigger from GitHub UI
   workflow_dispatch:
@@ -89,4 +91,4 @@ jobs:
           echo "Only matches featuring major teams from England, Spain, Italy, Germany, France, and Saudi Arabia are included." >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### ⏰ Next Scheduled Run" >> $GITHUB_STEP_SUMMARY
-          echo "Tomorrow at 5:00 AM UTC" >> $GITHUB_STEP_SUMMARY
+          echo "Daily at 00:10 AM Iraq time (21:10 UTC)" >> $GITHUB_STEP_SUMMARY
