@@ -8,19 +8,19 @@
   },
   "matches": [
     {
-      "id": "match-atlético-madrid-málaga-20260819",
-      "league": "LaLiga",
+      "id": "match-al-fayha-al-hilal-20260820",
+      "league": "Saudi Pro League",
       "status": "UPCOMING",
-      "time": "10:00 PM",
+      "time": "09:00 PM",
       "homeTeam": {
-        "name": "Atlético Madrid",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapi.apisport.online%2Fstatic%2Fimages%2Fteams%2F2836.png"
+        "name": "Al-Fayha",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapi.apisport.online%2Fstatic%2Fimages%2Fteams%2F168094.png"
       },
       "awayTeam": {
-        "name": "Málaga",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapi.apisport.online%2Fstatic%2Fimages%2Fteams%2F2830.png"
+        "name": "Al-Hilal",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapi.apisport.online%2Fstatic%2Fimages%2Fteams%2F21895.png"
       },
-      "channel": "beIN SPORTS",
+      "channel": "ثمانية / Thmanyah",
       "commentator": "غير محدد",
       "servers": [
         {
