@@ -8,17 +8,17 @@
   },
   "matches": [
     {
-      "id": "match-al-ittihad-al-hazem-20260824",
+      "id": "match-al-shabab-al-riyadh-20260825",
       "league": "Saudi Pro League",
       "status": "UPCOMING",
       "time": "09:00 PM",
       "homeTeam": {
-        "name": "Al-Ittihad",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapi.apisport.online%2Fstatic%2Fimages%2Fteams%2F34315.png"
+        "name": "Al-Shabab",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapi.apisport.online%2Fstatic%2Fimages%2Fteams%2F34313.png"
       },
       "awayTeam": {
-        "name": "Al-Hazem",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapi.apisport.online%2Fstatic%2Fimages%2Fteams%2F168086.png"
+        "name": "Al-Riyadh",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapi.apisport.online%2Fstatic%2Fimages%2Fteams%2F168088.png"
       },
       "channel": "ثمانية / Thmanyah",
       "commentator": "غير محدد",
@@ -38,19 +38,19 @@
       ]
     },
     {
-      "id": "match-fulham-chelsea-20260824",
-      "league": "الدوري الإنجليزي",
+      "id": "match-al-ettifaq-al-nassr-20260825",
+      "league": "Saudi Pro League",
       "status": "UPCOMING",
-      "time": "10:00 PM",
+      "time": "09:00 PM",
       "homeTeam": {
-        "name": "Fulham",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapi.apisport.online%2Fstatic%2Fimages%2Fteams%2F43.png"
+        "name": "Al-Ettifaq",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapi.apisport.online%2Fstatic%2Fimages%2Fteams%2F34318.png"
       },
       "awayTeam": {
-        "name": "Chelsea",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapi.apisport.online%2Fstatic%2Fimages%2Fteams%2F38.png"
+        "name": "Al-Nassr",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapi.apisport.online%2Fstatic%2Fimages%2Fteams%2F23400.png"
       },
-      "channel": "beIN SPORTS",
+      "channel": "ثمانية / Thmanyah",
       "commentator": "غير محدد",
       "servers": [
         {
