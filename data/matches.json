@@ -2,16 +2,16 @@
   "matches": [
     {
       "id": "match-برشلونة-رايو فاليكانو",
-      "league": "الدوري الإسباني",
+      "league": "الدوري الاسباني",
       "status": "UPCOMING",
       "time": "10:30 PM",
       "homeTeam": {
         "name": "برشلونة",
-        "logo": ""
+        "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Fc_barca.png"
       },
       "awayTeam": {
         "name": "رايو فاليكانو",
-        "logo": ""
+        "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RayoVallecanoEscudo.png"
       },
       "channel": "beIN SPORTS",
       "commentator": "غير محدد",
@@ -26,6 +26,12 @@
           "id": "srv2",
           "name": "سيرفر ثاني",
           "quality": "720p HD",
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+        },
+        {
+          "id": "srv3",
+          "name": "سيرفر ثالث",
+          "quality": "480p",
           "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
         }
       ]
