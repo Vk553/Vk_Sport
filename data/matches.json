@@ -56,7 +56,7 @@
           "id": "srv1",
           "name": "متعدد الجودات",
           "quality": "1080p",
-          "embedUrl": "https://vsd123.okcdn.ru/hls/18766476937864.m3u8/sig/usCR7hIHyzo/expires/1788289377679/srcIp/165.232.101.172/urls/178.237.23.47/clientType/0/srcAg/CHROME/mid/16256643767944/18766476937864_medium/index.m3u8"
+          "embedUrl": "https://ok.ru/videoembed/16256643767944?autoplay=1"
         },
         {
           "id": "srv2",
