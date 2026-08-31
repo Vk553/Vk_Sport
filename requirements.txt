@@ -1,1 +1,4 @@
-requests
+# No external dependencies needed.
+# update_matches.py now only uses Python's built-in standard library
+# (json, os, datetime) since it no longer calls any external API.
+ 
