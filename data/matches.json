@@ -7,11 +7,11 @@
       "time": "10:30 PM",
       "homeTeam": {
         "name": "برشلونة",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/500px-FC_Barcelona_%28crest%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2F4%2F47%2FFC_Barcelona_%2528crest%2529.svg%3Futm_source%3Den.wikipedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Doriginal"
       },
       "awayTeam": {
         "name": "رايو فاليكانو",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/Rayo_Vallecano_logo.svg/500px-Rayo_Vallecano_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fd%2Fd8%2FRayo_Vallecano_logo.svg%3Futm_source%3Den.wikipedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Doriginal"
       },
       "channel": "beIN SPORTS",
       "commentator": "غير محدد",
@@ -20,7 +20,43 @@
           "id": "srv1",
           "name": "متعدد الجودات",
           "quality": "1080p",
-          "embedUrl": "https://ok.ru/video/16099361234554"
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+        },
+        {
+          "id": "srv2",
+          "name": "سيرفر ثاني",
+          "quality": "720p HD",
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+        },
+        {
+          "id": "srv3",
+          "name": "سيرفر ثالث",
+          "quality": "480p",
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+        }
+      ]
+    },
+    {
+      "id": "match-ارسنال-استون فيلا",
+      "league": "الدوري الإنجليزي",
+      "status": "UPCOMING",
+      "time": "10:00 PM",
+      "homeTeam": {
+        "name": "ارسنال",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2F5%2F53%2FArsenal_FC.svg%3Futm_source%3Den.wikipedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Doriginal"
+      },
+      "awayTeam": {
+        "name": "استون فيلا",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2F8%2F86%2FAston_Villa_F.C._logo.svg%3Futm_source%3Den.wikipedia.org%26utm_campaign%3Dimageinfo%26utm_content%3Doriginal"
+      },
+      "channel": "beIN SPORTS",
+      "commentator": "غير محدد",
+      "servers": [
+        {
+          "id": "srv1",
+          "name": "متعدد الجودات",
+          "quality": "1080p",
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
         },
         {
           "id": "srv2",
@@ -36,5 +72,3 @@
         }
       ]
     }
-  ]
-}
