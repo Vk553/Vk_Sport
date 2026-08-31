@@ -1,3 +1,34 @@
 {
-  "matches": []
+  "matches": [
+    {
+      "id": "match-الرائد-الهلال",
+      "league": "الدوري السعودي",
+      "status": "UPCOMING",
+      "time": "09:00 PM",
+      "homeTeam": {
+        "name": "الرائد",
+        "logo": ""
+      },
+      "awayTeam": {
+        "name": "الهلال",
+        "logo": ""
+      },
+      "channel": "beIN SPORTS",
+      "commentator": "غير محدد",
+      "servers": [
+        {
+          "id": "srv1",
+          "name": "متعدد الجودات",
+          "quality": "1080p",
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+        },
+        {
+          "id": "srv2",
+          "name": "سيرفر ثاني",
+          "quality": "720p HD",
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+        }
+      ]
+    }
+  ]
 }
