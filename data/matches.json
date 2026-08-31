@@ -3,7 +3,7 @@
     {
       "id": "match-برشلونة-رايو فاليكانو",
       "league": "الدوري الإسباني",
-      "status": "ENDED",
+      "status": "UPCOMING",
       "time": "10:30 PM",
       "homeTeam": {
         "name": "برشلونة",
@@ -39,7 +39,7 @@
     {
       "id": "match-ارسنال-استون فيلا",
       "league": "الدوري الإنجليزي",
-      "status": "ENDED",
+      "status": "UPCOMING",
       "time": "10:00 PM",
       "homeTeam": {
         "name": "ارسنال",
