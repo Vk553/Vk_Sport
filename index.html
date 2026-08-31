@@ -152,21 +152,33 @@ l.parentNode.insertBefore(s, l);
     }
 
     /* Telegram marquee banner */
+    #telegram-marquee {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 60;
+      background: linear-gradient(90deg, #0284c7, #0ea5e9);
+      padding: 10px 0;
+      direction: ltr;
+    }
+
     .marquee-wrapper {
       overflow: hidden;
       white-space: nowrap;
       position: relative;
+      width: 100%;
     }
 
     .marquee-content {
       display: inline-block;
-      padding-right: 100%;
-      animation: marquee-scroll 18s linear infinite;
+      padding-left: 100%;
+      animation: marquee-scroll 22s linear infinite;
     }
 
     @keyframes marquee-scroll {
       0% {
-        transform: translateX(0%);
+        transform: translateX(0);
       }
       100% {
         transform: translateX(-100%);
@@ -176,10 +188,69 @@ l.parentNode.insertBefore(s, l);
     .marquee-wrapper:hover .marquee-content {
       animation-play-state: paused;
     }
+
+    .marquee-item {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      direction: rtl;
+      unicode-bidi: embed;
+    }
+
+    .marquee-item:hover {
+      text-decoration: underline;
+    }
+
+    .marquee-item svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .marquee-spacer {
+      display: inline-block;
+      width: 64px;
+    }
+
+    /* Push header down since marquee is now fixed above it */
+    header {
+      top: 42px !important;
+    }
+
+    body {
+      padding-top: 42px;
+    }
   </style>
 </head>
 
 <body class="min-h-screen bg-midnight text-white">
+
+  <!-- Telegram Join Marquee Banner (fixed, stays visible on scroll) -->
+  <div id="telegram-marquee">
+    <div class="marquee-wrapper">
+      <div class="marquee-content">
+        <a href="https://t.me/Vk_Sport" target="_blank" rel="noopener noreferrer" class="marquee-item">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21.9 3.2 2.8 10.6c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.9c.2.6.1.9.7.9.5 0 .7-.2 1-.4.4l2.4-2.3 5 3.7c.9.5 1.6.3 1.8-.8l3.2-15.1c.3-1.4-.5-2-1.2-1.7ZM8.3 13.3l10.8-6.8c.5-.3.9-.1.5.2l-8.8 7.9-.3 3.2-2.2-4.5Z"/>
+          </svg>
+          📢 انضم الآن إلى قناتنا على تليجرام لمتابعة جميع البثوث المباشرة والمباريات القادمة أولاً بأول! اضغط هنا للانضمام 🔥
+        </a>
+        <span class="marquee-spacer"></span>
+        <a href="https://t.me/Vk_Sport" target="_blank" rel="noopener noreferrer" class="marquee-item">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21.9 3.2 2.8 10.6c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.9c.2.6.1.9.7.9.5 0 .7-.2 1-.4.4l2.4-2.3 5 3.7c.9.5 1.6.3 1.8-.8l3.2-15.1c.3-1.4-.5-2-1.2-1.7ZM8.3 13.3l10.8-6.8c.5-.3.9-.1.5.2l-8.8 7.9-.3 3.2-2.2-4.5Z"/>
+          </svg>
+          📢 انضم الآن إلى قناتنا على تليجرام لمتابعة جميع البثوث المباشرة والمباريات القادمة أولاً بأول! اضغط هنا للانضمام 🔥
+        </a>
+        <span class="marquee-spacer"></span>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Header -->
   <header class="glass-card border-b border-slate-700/50 sticky top-0 z-50">
@@ -249,39 +320,6 @@ l.parentNode.insertBefore(s, l);
       </div>
     </div>
   </header>
-
-
-  <!-- Telegram Join Marquee Banner -->
-  <div class="bg-gradient-to-r from-sky-600 to-sky-500 py-2.5">
-    <div class="marquee-wrapper">
-      <div class="marquee-content">
-        <a
-          href="https://t.me/Vk_Sport"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-white font-bold text-sm md:text-base inline-flex items-center gap-2 hover:underline"
-        >
-          <svg class="w-5 h-5 inline-block" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M21.9 3.2 2.8 10.6c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.9c.2.6.1.9.7.9.5 0 .7-.2 1-.4.4l2.4-2.3 5 3.7c.9.5 1.6.3 1.8-.8l3.2-15.1c.3-1.4-.5-2-1.2-1.7ZM8.3 13.3l10.8-6.8c.5-.3.9-.1.5.2l-8.8 7.9-.3 3.2-2.2-4.5Z"/>
-          </svg>
-          📢 انضم الآن إلى قناتنا على تليجرام لمتابعة جميع البثوث المباشرة والمباريات القادمة أولاً بأول! اضغط هنا للانضمام 🔥
-        </a>
-        <span class="inline-block w-16"></span>
-        <a
-          href="https://t.me/Vk_Sport"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-white font-bold text-sm md:text-base inline-flex items-center gap-2 hover:underline"
-        >
-          <svg class="w-5 h-5 inline-block" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M21.9 3.2 2.8 10.6c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.9c.2.6.1.9.7.9.5 0 .7-.2 1-.4.4l2.4-2.3 5 3.7c.9.5 1.6.3 1.8-.8l3.2-15.1c.3-1.4-.5-2-1.2-1.7ZM8.3 13.3l10.8-6.8c.5-.3.9-.1.5.2l-8.8 7.9-.3 3.2-2.2-4.5Z"/>
-          </svg>
-          📢 انضم الآن إلى قناتنا على تليجرام لمتابعة جميع البثوث المباشرة والمباريات القادمة أولاً بأول! اضغط هنا للانضمام 🔥
-        </a>
-        <span class="inline-block w-16"></span>
-      </div>
-    </div>
-  </div>
 
 
   <!-- Main Content -->
