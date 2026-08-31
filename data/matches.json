@@ -1,10 +1,3 @@
 {
-  "globalAds": {
-    "popunder_home": "https://your-ad-network-directlink1.com",
-    "popunder_player": "https://your-ad-network-directlink2.com",
-    "social_bar_script": "",
-    "banner_728x90_script": "",
-    "native_banner_script": ""
-  },
   "matches": []
 }
