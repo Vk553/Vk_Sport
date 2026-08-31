@@ -3,7 +3,7 @@
     {
       "id": "match-برشلونة-رايو فاليكانو",
       "league": "الدوري الإسباني",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "time": "10:30 PM",
       "homeTeam": {
         "name": "برشلونة",
@@ -20,7 +20,7 @@
           "id": "srv1",
           "name": "متعدد الجودات",
           "quality": "1080p",
-          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+          "embedUrl": "https://ok.ru/videoembed/16423338188447?nochat=1"
         },
         {
           "id": "srv2",
