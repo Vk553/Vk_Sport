@@ -3,7 +3,7 @@
     {
       "id": "match-ريال-مدريد-ريال-بيتيس",
       "league": "الدوري الإسباني",
-      "status": "LIVE",
+      "status": "ENDED",
       "date": "2026-09-04",
       "time": "10:00 PM",
       "homeTeam": {
@@ -40,7 +40,7 @@
     {
       "id": "match-ليفربول-إيبسويتش-تاون",
       "league": "الدوري الإنجليزي",
-      "status": "LIVE",
+      "status": "ENDED",
       "date": "2026-09-04",
       "time": "10:00 PM",
       "homeTeam": {
