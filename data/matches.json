@@ -1,27 +1,64 @@
 {
   "matches": [
     {
-      "id": "match-الهلال-الاهلي",
-      "league": "الدوري السعودي",
-      "status": "ENDED",
-      "date": "2026-09-01",
-      "time": "09:00 PM",
+      "id": "match-ريال-مدريد-ريال-بيتيس",
+      "league": "الدوري الإسباني",
+      "status": "UPCOMING",
+      "date": "2026-09-04",
+      "time": "10:00 PM",
       "homeTeam": {
-        "name": "الهلال",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Al_Hilal_SFC_Logo.svg/500px-Al_Hilal_SFC_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+        "name": "ريال مدريد",
+        "logo": "https://external-content.duckduckgo.com/iu/?u="
       },
       "awayTeam": {
-        "name": "الأهلي",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Al_Ahli_Saudi_FC_logo.svg/500px-Al_Ahli_Saudi_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+        "name": "ريال بيتيس",
+        "logo": "https://external-content.duckduckgo.com/iu/?u="
       },
-      "channel": "ثمانية",
+      "channel": "beIN SPORTS",
       "commentator": "غير محدد",
       "servers": [
         {
           "id": "srv1",
           "name": "متعدد الجودات",
           "quality": "1080p",
-          "embedUrl": "https://ok.ru/videoembed/17194422509086?nochat=1&autoplay=1"
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+        },
+        {
+          "id": "srv2",
+          "name": "سيرفر ثاني",
+          "quality": "720p HD",
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+        },
+        {
+          "id": "srv3",
+          "name": "سيرفر ثالث",
+          "quality": "480p",
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+        }
+      ]
+    },
+    {
+      "id": "match-ليفربول-إيبسويتش-تاون",
+      "league": "الدوري الإنجليزي",
+      "status": "UPCOMING",
+      "date": "2026-09-04",
+      "time": "10:00 PM",
+      "homeTeam": {
+        "name": "ليفربول",
+        "logo": "https://external-content.duckduckgo.com/iu/?u="
+      },
+      "awayTeam": {
+        "name": "إيبسويتش تاون",
+        "logo": "https://external-content.duckduckgo.com/iu/?u="
+      },
+      "channel": "beIN SPORTS",
+      "commentator": "غير محدد",
+      "servers": [
+        {
+          "id": "srv1",
+          "name": "متعدد الجودات",
+          "quality": "1080p",
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
         },
         {
           "id": "srv2",
