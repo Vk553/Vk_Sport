@@ -3,7 +3,7 @@
     {
       "id": "match-الاتحاد-النصر",
       "league": "الدوري السعودي",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "date": "2026-09-05",
       "time": "09:00 PM",
       "homeTeam": {
@@ -21,7 +21,7 @@
           "id": "srv1",
           "name": "متعدد الجودات",
           "quality": "1080p",
-          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+          "embedUrl": "http://kappa.cloudf-nexon.xyz:80/nexsonasat476/3inictd1ci/1841274"
         },
         {
           "id": "srv2",
