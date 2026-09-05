@@ -21,19 +21,19 @@
           "id": "srv1",
           "name": "متعدد الجودات",
           "quality": "1080p",
-          "embedUrl": "https://corsproxy.io/?url=http%3A%2F%2Fkappa.cloudf-nexon.xyz%3A80%2Fnexsonasat476%2F3inictd1ci%2F1841274"
+          "embedUrl": "https://corsproxy.io/?key=c8dea5b2&url=http%3A%2F%2Fkappa.cloudf-nexon.xyz%3A80%2Fnexsonasat476%2F3inictd1ci%2F1841274"
         },
         {
           "id": "srv2",
           "name": "سيرفر ثاني",
           "quality": "720p HD",
-          "embedUrl": "https://corsproxy.io/?url=http%3A%2F%2Fkappa.cloudf-nexon.xyz%3A80%2Fnexsonasat476%2F3inictd1ci%2F1841274"
+          "embedUrl": "https://corsproxy.io/?key=c8dea5b2&url=http%3A%2F%2Fkappa.cloudf-nexon.xyz%3A80%2Fnexsonasat476%2F3inictd1ci%2F1841274"
         },
         {
           "id": "srv3",
           "name": "سيرفر ثالث",
           "quality": "480p",
-          "embedUrl": "https://corsproxy.io/?url=http%3A%2F%2Fkappa.cloudf-nexon.xyz%3A80%2Fnexsonasat476%2F3inictd1ci%2F1841274"
+          "embedUrl": "https://corsproxy.io/?key=c8dea5b2&url=http%3A%2F%2Fkappa.cloudf-nexon.xyz%3A80%2Fnexsonasat476%2F3inictd1ci%2F1841274"
         }
       ]
     }
