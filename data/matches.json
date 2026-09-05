@@ -3,7 +3,7 @@
     {
       "id": "match-الاتحاد-النصر",
       "league": "الدوري السعودي",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "date": "2026-09-05",
       "time": "09:00 PM",
       "homeTeam": {
@@ -21,19 +21,19 @@
           "id": "srv1",
           "name": "متعدد الجودات",
           "quality": "1080p",
-          "embedUrl": "http://kappa.cloudf-nexon.xyz:80/nexsonasat476/3inictd1ci/1841274"
+          "embedUrl": "https://corsproxy.io/?url=http%3A%2F%2Fkappa.cloudf-nexon.xyz%3A80%2Fnexsonasat476%2F3inictd1ci%2F1841274"
         },
         {
           "id": "srv2",
           "name": "سيرفر ثاني",
           "quality": "720p HD",
-          "embedUrl": "http://kappa.cloudf-nexon.xyz:80/nexsonasat476/3inictd1ci/1841274"
+          "embedUrl": "https://corsproxy.io/?url=http%3A%2F%2Fkappa.cloudf-nexon.xyz%3A80%2Fnexsonasat476%2F3inictd1ci%2F1841274"
         },
         {
           "id": "srv3",
           "name": "سيرفر ثالث",
           "quality": "480p",
-          "embedUrl": "http://kappa.cloudf-nexon.xyz:80/nexsonasat476/3inictd1ci/1841274"
+          "embedUrl": "https://corsproxy.io/?url=http%3A%2F%2Fkappa.cloudf-nexon.xyz%3A80%2Fnexsonasat476%2F3inictd1ci%2F1841274"
         }
       ]
     }
