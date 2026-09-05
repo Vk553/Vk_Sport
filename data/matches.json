@@ -3,7 +3,7 @@
     {
       "id": "match-الاتحاد-النصر",
       "league": "الدوري السعودي",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "date": "2026-09-05",
       "time": "09:00 PM",
       "homeTeam": {
@@ -21,8 +21,7 @@
           "id": "srv1",
           "name": "متعدد الجودات",
           "quality": "1080p",
-          "embedUrl": "https://corsproxy.io/?key=c8dea5b2&url=http%3A%2F%2Fkappa.cloudf-nexon.xyz%3A80%2Fnexsonasat476%2F3inictd1ci%2F1841274"
-        },
+          "embedUrl": "https://live-tv-116849026166.europe-west1.run.app/api/elahmad/embed?path=%2Ftv%2Fwatchtv.php%3Fid%3Dalfajertv&name=Al%20Fajer%201"
         {
           "id": "srv2",
           "name": "سيرفر ثاني",
