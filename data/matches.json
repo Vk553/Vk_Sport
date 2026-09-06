@@ -3,7 +3,7 @@
     {
       "id": "match-برشلونة-فالنسيا",
       "league": "الدوري الإسباني",
-      "status": "LIVE",
+      "status": "ENDED",
       "date": "2026-09-06",
       "time": "05:15 PM",
       "homeTeam": {
@@ -40,7 +40,7 @@
     {
       "id": "match-تشيلسي-ارسنال",
       "league": "الدوري الإنجليزي",
-      "status": "LIVE",
+      "status": "ENDED",
       "date": "2026-09-06",
       "time": "06:30 PM",
       "homeTeam": {
