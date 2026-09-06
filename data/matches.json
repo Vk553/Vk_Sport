@@ -45,11 +45,11 @@
       "time": "06:30 PM",
       "homeTeam": {
         "name": "تشيلسي",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2Fc%2Fcc%2FChelsea_FC.svg%2F800px-Chelsea_FC.svg.png"
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/500px-Chelsea_FC.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
       },
       "awayTeam": {
         "name": "أرسنال",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2F5%2F53%2FArsenal_FC.svg%2F800px-Arsenal_FC.svg.png"
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/500px-Arsenal_FC.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
       },
       "channel": "beIN SPORTS",
       "commentator": "غير محدد",
@@ -58,7 +58,7 @@
           "id": "srv1",
           "name": "متعدد الجودات",
           "quality": "1080p",
-          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+          "embedUrl": "https://hrthrtjhrtijkhiurt.chkgjkg.online/hls/11.m3u8"
         },
         {
           "id": "srv2",
@@ -82,11 +82,11 @@
       "time": "09:45 PM",
       "homeTeam": {
         "name": "ميلان",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fd%2Fd0%2FLogo_of_AC_Milan.svg"
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/330px-Logo_of_AC_Milan.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
       },
       "awayTeam": {
         "name": "يوفنتوس",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F1%2F15%2FJuventus_FC_2017_logo.svg"
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Juventus_FC_-_logo_black_%28Italy%2C_2020%29.svg/330px-Juventus_FC_-_logo_black_%28Italy%2C_2020%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
       },
       "channel": "Starzplay",
       "commentator": "غير محدد",
