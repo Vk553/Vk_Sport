@@ -21,7 +21,7 @@
           "id": "srv1",
           "name": "متعدد الجودات",
           "quality": "1080p",
-          "embedUrl": "https://alyaassta.hsinnzaer5.workers.dev/?stream=http%3A%2F%2Fre.new-redirect.online%2Flive%2F69854211%2Findex.m3u8%3Ft%3DpZ22qPdpbwqP3ltoEnMpdQ%26e%3D1788719814"
+          "embedUrl": ""
         },
         {
           "id": "srv2",
@@ -33,7 +33,7 @@
           "id": "srv3",
           "name": "سيرفر ثالث",
           "quality": "480p",
-          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+          "embedUrl": "https://hrthrtjhrtijkhiurt.chkgjkg.online/hls/22.m3u8"
         }
       ]
     }
