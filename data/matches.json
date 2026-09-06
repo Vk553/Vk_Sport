@@ -21,19 +21,19 @@
           "id": "srv1",
           "name": "متعدد الجودات",
           "quality": "1080p",
-          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
+          "embedUrl": "https://hrthrtjhrtijkhiurt.chkgjkg.online/hls/22.m3u8"
         },
         {
           "id": "srv2",
           "name": "سيرفر ثاني",
           "quality": "720p HD",
-          "embedUrl": "https://hrthrtjhrtijkhiurt.chkgjkg.online/hls/11.m3u8"
+          "embedUrl": ""
         },
         {
           "id": "srv3",
           "name": "سيرفر ثالث",
           "quality": "480p",
-          "embedUrl": "https://hrthrtjhrtijkhiurt.chkgjkg.online/hls/22.m3u8"
+          "embedUrl": ""
         }
       ]
     },
