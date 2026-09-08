@@ -1,18 +1,18 @@
 {
   "matches": [
     {
-      "id": "match-برشلونة-فالنسيا",
-      "league": "الدوري الإسباني",
-      "status": "ENDED",
-      "date": "2026-09-06",
-      "time": "05:15 PM",
+      "id": "match-ريال-مدريد-إنتر-ميلان",
+      "league": "دوري أبطال أوروبا",
+      "status": "UPCOMING",
+      "date": "2026-09-08",
+      "time": "09:55 PM",
       "homeTeam": {
-        "name": "برشلونة",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2F4%2F47%2FFC_Barcelona_%28crest%29.svg%2F500px-FC_Barcelona_%28crest%29.svg.png%3Futm_source%3Den.wikipedia.org%26utm_campaign%3Dparser%26utm_content%3Dthumbnail"
+        "name": "ريال مدريد",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https://thumb.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/330px-Real_Madrid_CF.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
       },
       "awayTeam": {
-        "name": "فالنسيا",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2Fc%2Fce%2FValenciacf.svg%2F500px-Valenciacf.svg.png%3Futm_source%3Den.wikipedia.org%26utm_campaign%3Dparser%26utm_content%3Dthumbnail"
+        "name": "إنتر ميلان",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/FC_Internazionale_Milano_2021.svg/500px-FC_Internazionale_Milano_2021.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
       },
       "channel": "beIN SPORTS",
       "commentator": "غير محدد",
@@ -21,44 +21,7 @@
           "id": "srv1",
           "name": "متعدد الجودات",
           "quality": "1080p",
-          "embedUrl": "https://hrthrtjhrtijkhiurt.chkgjkg.online/hls/22.m3u8"
-        },
-        {
-          "id": "srv2",
-          "name": "سيرفر ثاني",
-          "quality": "720p HD",
-          "embedUrl": ""
-        },
-        {
-          "id": "srv3",
-          "name": "سيرفر ثالث",
-          "quality": "480p",
-          "embedUrl": ""
-        }
-      ]
-    },
-    {
-      "id": "match-تشيلسي-ارسنال",
-      "league": "الدوري الإنجليزي",
-      "status": "ENDED",
-      "date": "2026-09-06",
-      "time": "06:30 PM",
-      "homeTeam": {
-        "name": "تشيلسي",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/500px-Chelsea_FC.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-      },
-      "awayTeam": {
-        "name": "أرسنال",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/500px-Arsenal_FC.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-      },
-      "channel": "beIN SPORTS",
-      "commentator": "غير محدد",
-      "servers": [
-        {
-          "id": "srv1",
-          "name": "متعدد الجودات",
-          "quality": "1080p",
-          "embedUrl": "https://hrthrtjhrtijkhiurt.chkgjkg.online/hls/11.m3u8"
+          "embedUrl": "PASTE_YOUR_EMBED_URL_HERE"
         },
         {
           "id": "srv2",
@@ -75,20 +38,20 @@
       ]
     },
     {
-      "id": "match-ميلان-يوفنتوس",
-      "league": "الدوري الإيطالي",
-      "status": "ENDED",
-      "date": "2026-09-06",
-      "time": "09:45 PM",
+      "id": "match-مانشستر-سيتي-بورتو",
+      "league": "دوري أبطال أوروبا",
+      "status": "UPCOMING",
+      "date": "2026-09-08",
+      "time": "09:55 PM",
       "homeTeam": {
-        "name": "ميلان",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/330px-Logo_of_AC_Milan.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+        "name": "مانشستر سيتي",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https://thumb.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/500px-Manchester_City_FC_badge.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
       },
       "awayTeam": {
-        "name": "يوفنتوس",
-        "logo": "https://external-content.duckduckgo.com/iu/?u=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Juventus_FC_-_logo_black_%28Italy%2C_2020%29.svg/330px-Juventus_FC_-_logo_black_%28Italy%2C_2020%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+        "name": "بورتو",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https://thumb.wikimedia.org/wikipedia/en/thumb/f/f1/FC_Porto.svg/500px-FC_Porto.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
       },
-      "channel": "Starzplay",
+      "channel": "beIN SPORTS",
       "commentator": "غير محدد",
       "servers": [
         {
